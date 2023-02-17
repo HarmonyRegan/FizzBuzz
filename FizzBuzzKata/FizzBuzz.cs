@@ -27,8 +27,8 @@ namespace FizzBuzzKata
         public List<String> Check(int[] numbers)
         {
            
-            var ret = numbers.Select(num => Check(num).ToString()).ToList();
-            return ret;
+            return numbers.Select(num => Check(num)).ToList();
+            
         }
 
       
