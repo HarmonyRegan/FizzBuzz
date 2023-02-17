@@ -10,6 +10,8 @@ namespace FizzBuzzKata
     {
         public string Check(int number)
         {
+                if (number.ToString().Contains('3'))
+                return "Lucky";
                 if (number % 3 == 0 && number % 5 == 0)
                 {
                 return "FizzBuzz";
@@ -35,6 +37,6 @@ namespace FizzBuzzKata
             }
             return results.ToArray();
         }
-     }
+    }
 };
     
