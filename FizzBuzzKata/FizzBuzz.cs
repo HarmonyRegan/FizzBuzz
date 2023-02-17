@@ -14,15 +14,26 @@ namespace FizzBuzzKata
             {
                 return "FizzBuzz";
             }
-            if (number % 3 == 0)
+            else if (number % 3 == 0)
             {
                 return "Fizz";
             }
-            if(number % 5 == 0)
+            else if(number % 5 == 0)
             {
                 return "Buzz";
             }
             return number.ToString();
         }
+        public string[] Check(int[] numbers)
+        {   
+            var ret = new string[numbers.Length];
+            for(var i = 0; i < numbers.Length; i++) 
+            {
+                ret[i] = this.Check(numbers[i]).ToString();
+            }
+            return ret;
+        }
+
+      
     }
 }
