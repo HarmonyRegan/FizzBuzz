@@ -1,6 +1,6 @@
 namespace FizzBuzzKata
 {
-    public class UnitTest1
+    public class FizzBuzzTest
     {
         [Fact]
         public void NotFizzBuzz()
@@ -10,15 +10,18 @@ namespace FizzBuzzKata
         }
 
         [Fact]
-        public void DivisibleBy3Fizz() {
+        public void DivisibleBy3Fizz()
+        {
             var number = new FizzBuzz().Check(3);
             Assert.Equal("Fizz", number);
         }
-    }
 
-
-
-
-    
+        [Fact]
+        public void DivisibleBy5Buzz()
+        {
+            var number = new FizzBuzz().Check(5);
+            Assert.Equal("Buzz", number);
+        }
+    } 
 }
 
