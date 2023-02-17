@@ -24,13 +24,10 @@ namespace FizzBuzzKata
             }
             return number.ToString();
         }
-        public string[] Check(int[] numbers)
-        {   
-            var ret = new string[numbers.Length];
-            for(var i = 0; i < numbers.Length; i++) 
-            {
-                ret[i] = this.Check(numbers[i]).ToString();
-            }
+        public List<String> Check(int[] numbers)
+        {
+           
+            var ret = numbers.Select(num => Check(num).ToString()).ToList();
             return ret;
         }
 
