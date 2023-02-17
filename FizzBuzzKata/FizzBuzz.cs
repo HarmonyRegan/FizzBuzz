@@ -10,12 +10,14 @@ namespace FizzBuzzKata
     {
         public string Check(int number)
         {
-                if (number.ToString().Contains('3'))
-                return "Lucky";
-                if (number % 3 == 0 && number % 5 == 0)
-                {
-                return "FizzBuzz";
-                }
+                var LuckyRule = new Lucky();
+            if (LuckyRule.isApplicable(number))
+                return LuckyRule.apply();
+
+                var RuleFizzBuzz = new FizzBuzzRule();
+            if (RuleFizzBuzz.isApplicable(number))
+                return RuleFizzBuzz.apply();
+
                 if (number % 3 == 0)
                 {
                 return "Fizz";
@@ -38,5 +40,7 @@ namespace FizzBuzzKata
             return results.ToArray();
         }
     }
+
+
 };
     
