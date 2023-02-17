@@ -22,6 +22,16 @@ namespace FizzBuzzKata
             var number = new FizzBuzz().Check(5);
             Assert.Equal("Buzz", number);
         }
+
+        [Theory]
+        [InlineData(1,"1")]
+        [InlineData(5, "Buzz")]
+        [InlineData(3, "Fizz")]
+        public void FizzBuzzTests(int input, string expected)
+        {
+            var number = new FizzBuzz().Check(input);
+            Assert.Equal(expected, number);
+        }
     } 
 }
 
